@@ -27,8 +27,6 @@ int main(int argc, char * argv[]) {
 								}
 				} 
 				forEachNodeDepthFirst(treeBase, printNode);
-				//printf("--------------\n");
-				//forEachNodeDepthFirst(orphanBase, printNode);
 				return 0;
 }
 

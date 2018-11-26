@@ -55,8 +55,8 @@ struct Node *findNodeByPid(struct Node *current, char *pid) {
 				if (current == NULL) return NULL;
 				struct Node *result = NULL;
 				if (strcmp(current->pid, pid) == 0) result = current;
-				else if (result == NULL && current->firstChild != NULL) result =  findNodeByPid(current->firstChild, pid);
-				else if (result == NULL && current->nextSibling != NULL) result = findNodeByPid(current->nextSibling, pid);
+				if (result == NULL && current->firstChild != NULL) result = findNodeByPid(current->firstChild, pid);
+				if (result == NULL && current->nextSibling != NULL) result = findNodeByPid(current->nextSibling, pid);
 				return result;
 }
 
